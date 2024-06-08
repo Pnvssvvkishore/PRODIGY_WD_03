@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #E49BFF;
+        }
+        #gameBoard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #000;
+            font-size: 36px;
+            font-weight: bold;
+            background-color: #F8F9D7;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .box:hover:not(:disabled) {
+            background-color: #e0e0e0;
+        }
+        .box:disabled {
+            cursor: not-allowed;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #008cba;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #005f5f;
+        }
+        #msgContainer {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #008000;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameBoard">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <button id="reset-btn">Reset</button>
+    <button id="new-btn" class="hide">New Game</button>
+    <div id="msgContainer" class="hide">
+        <p id="msg"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
